@@ -8,6 +8,7 @@
 /* width */
 ::-webkit-scrollbar {
   width: 4px;
+
 }
 
 /* Track */
@@ -38,7 +39,9 @@
 p,
 label,
 button,
-a {
+a, 
+input,
+textarea {
   border: 0;
   outline: none !important;
   text-decoration: none !important;
@@ -167,6 +170,7 @@ main::after {
 .text-20,
 .text-16,
 .text-14,
+.text-15,
 .text-13,
 .text-12,
 .text-11 {
@@ -189,6 +193,9 @@ main::after {
 }
 .text-14 {
   font-size: 14px;
+}
+.text-15{
+  font-size: 15px;
 }
 .text-16 {
   font-size: 16px;
@@ -302,6 +309,9 @@ background: linear-gradient(91deg, rgba(255, 255, 255, 0.50) 67.5%, rgba(218, 24
 .nav-btns-inp:checked + .nav-btn svg path{
   fill: #FF7C66;
 }
+.nav-btns-inp:checked + .nav-btn img{
+  filter: invert(35%) sepia(75%) saturate(1548%) hue-rotate(320deg) brightness(101%) contrast(95%);
+}
 
 .nav-btn-submenu{
   width: 600px;
@@ -311,10 +321,11 @@ background: linear-gradient(91deg, rgba(255, 255, 255, 0.50) 67.5%, rgba(218, 24
   border: 1px solid #DBE4EF;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.70) 64.95%, rgba(223, 231, 240, 0.70) 98.41%);
   backdrop-filter: blur(6px);
-  padding: 20px 25px 25px 25px;
+  padding: 20px 15px 25px 25px;
   height: 100%;
   max-height: calc(100% - 100px);
   overflow: hidden;
+  z-index: 5;
 }
 .nav-btn-submenu>div{
   height: 100%;
@@ -325,6 +336,8 @@ background: linear-gradient(91deg, rgba(255, 255, 255, 0.50) 67.5%, rgba(218, 24
   position: relative;
   display: block;
   padding-bottom: 0;
+  padding-top: 5px;
+  padding-right: 10px;
 }
 
 .nav-btns-inp:checked + .nav-btn + .nav-btn-submenu{
@@ -340,7 +353,12 @@ background: linear-gradient(91deg, rgba(255, 255, 255, 0.50) 67.5%, rgba(218, 24
 .options-btn::after{
   display: none;
 }
-
+.nav-btn-submenu .options-btn img{
+  height: 12px;
+}
+.options-btn[aria-expanded="true"] img{
+  filter: invert(62%) sepia(75%) saturate(1548%) hue-rotate(320deg) brightness(101%) contrast(95%);
+}
 .options{
   width: 185px;
   height: 35px;
@@ -367,7 +385,39 @@ opacity: 1;
   display: flex;
   align-items: center;
   font-size: inherit;
+  color: inherit;
+  width: auto;
+  max-width: none;
 }
 
 
 
+
+
+.message-box{
+padding: 0 49px;
+
+}
+.message-box>div{
+  height: 60px;
+  border-radius: 30px;
+border: 1px solid rgba(167, 175, 186, 0.80);
+
+background: linear-gradient(93deg, rgba(255, 255, 255, 0.50) 73.04%, rgba(218, 242, 252, 0.50) 117.08%);
+
+backdrop-filter: blur(6px);
+overflow: hidden;
+
+
+}
+.message-box button{
+  width: 76px;
+  height: 54px;
+  border-radius: 30px;
+  background: linear-gradient(271deg, #A03291 1.87%, #FF7C66 92.26%);
+  margin: 3px;
+}
+.message-box textarea{
+  padding: 21px 24px;
+  resize: none;
+} 

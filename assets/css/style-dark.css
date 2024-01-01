@@ -40,3 +40,23 @@ color: #ffffff;
 body.mode-dark .text-grey{
 color: #B3CDD9;
 }
+
+body.mode-dark .message-box>div{
+    border: 1px solid rgba(219, 228, 239, 0.34);
+
+    background: rgba(30, 31, 73, 0.50);
+
+}
+
+body.mode-dark .nav-btn-submenu{
+    border: 1px solid rgba(219, 228, 239, 0.30);
+
+    background: linear-gradient(180deg, rgba(14, 11, 46, 0.70) 64.95%, rgba(38, 28, 82, 0.70) 98.41%);
+
+}
+
+body.mode-dark .options{
+    border: 1px solid rgba(219, 228, 239, 0.29);
+    background: linear-gradient(93deg, rgba(30, 31, 73, 0.40) 73.04%, rgba(43, 36, 91, 0.40) 117.08%);
+
+}
