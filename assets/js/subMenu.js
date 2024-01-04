@@ -1,5 +1,3 @@
-$(".nav-btn-submenu").on("DOMSubtreeModified", function () {});
-
 $("#prompts, #attributes, #closeAlll").change((event) => {
   var subMenu = $(event.target).siblings(".nav-btn-submenu");
   if (subMenu.length > 0) {
