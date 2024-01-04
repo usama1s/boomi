@@ -79,3 +79,8 @@ body.mode-dark .modal .message-box>div{
 
   background: #3C4245;
 }
+
+body.mode-dark .nav-btn-submenu .list a:hover{
+  /* background-color: rgba(16, 13, 47, 0.25); */
+  color: white !important;
+}

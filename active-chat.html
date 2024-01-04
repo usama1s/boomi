@@ -61,8 +61,8 @@
                 />
               </div>
               <button
-                class="big-btn new-chat-btn text-14 text-center mb-4 mt-3"
-                disabled
+                class="big-btn new-chat-btn text-14 text-center mb-4 mt-3 active"
+                onclick=" window.location.href = 'index.html';"
               >
                 <p class="mb-0">
                   <span class="icon plus"> </span>
@@ -85,7 +85,7 @@
 
             <div class="recent-chats-list">
               <div
-                class="d-flex flex-row align-items-center justify-content-between w-100 py-3 recent-chat-btn"
+                class="d-flex flex-row align-items-center justify-content-between w-100 py-3 recent-chat-btn active"
               >
                 <a href="active-chat.html">
                   <p
@@ -427,13 +427,21 @@
 
                 <div class="list">
                   <div class="d-flex flex-column align-items-start">
-                    <a class="text-14 text-blue my-0">Request ELT Sales Support</a>
+                    <a class="text-14 text-blue my-0"
+                      >Request ELT Sales Support</a
+                    >
                     <div class="px-3 w-100"><hr /></div>
-                    <a class="text-14 text-blue my-0">Hoffman Framework (Referral)</a>
+                    <a class="text-14 text-blue my-0"
+                      >Hoffman Framework (Referral)</a
+                    >
                     <div class="px-3 w-100"><hr /></div>
-                    <a class="text-14 text-blue my-0">Outbound Work History-Based</a>
+                    <a class="text-14 text-blue my-0"
+                      >Outbound Work History-Based</a
+                    >
                     <div class="px-3 w-100"><hr /></div>
-                    <a class="text-14 text-blue my-0">Hoffman Framework (Time)</a>
+                    <a class="text-14 text-blue my-0"
+                      >Hoffman Framework (Time)</a
+                    >
                     <div class="px-3 w-100"><hr /></div>
                     <a class="text-14 text-blue my-0">Email Marketing</a>
                     <div class="px-3 w-100"><hr /></div>
@@ -1143,17 +1151,59 @@
         <div class="right-pane-content flex-grow-1 d-flex flex-column">
           <!-- main content  -->
           <main class="d-flex flex-grow-1">
-            <div
-              class="d-none flex-column align-items-center justify-content-center flex-grow-1"
-            >
-              <img class="mb-4" src="./assets/images/AI.svg" alt="" />
-              <h5 class="text-32 text-blue text-center pt-2">Sales CoPilot</h5>
-              <p class="text-32 text-orange font-weight-400 text-center">
-                Let's 10X growth together!
-              </p>
-            </div>
+            <div class="chat-section">
+              <div class="chat">
+                <div class="icon">
+                  <img src="./assets/images/ai.svg" alt="" />
+                </div>
+                <div class="text">
+                  <p class="text-16 font-weight-400 text-black">
+                    In a broad sense, "design" refers to the process of creating
+                    a plan or specification for the construction or production
+                    of an object, system, or process. Design involves making
+                    decisions about how something should look, function, or be
+                    structured to achieve specific goals or objectives.
+                  </p>
+                  <p class="text-16 font-weight-400 text-black">
+                    Here are a few different contexts in which the term "design"
+                    is commonly used:
+                  </p>
 
-            <div></div>
+                  <ol class="text-16 font-weight-400 text-black">
+                    <li>
+                      <p class="text-16 font-weight-400 text-black">
+                        <span class="font-weight-700">Product Design:</span>
+                        This involves creating visual content for print or
+                        digital media. Graphic designers use elements like
+                        typography, images, and layout to convey a message or
+                        create a visual identity.
+                      </p>
+                    </li>
+                    <li>
+                      <p class="text-16 font-weight-400 text-black">
+                        <span class="font-weight-700">Graphic Design:</span>
+                        Product designers work on creating physical products.
+                        They consider factors like usability, aesthetics,
+                        materials, and manufacturing processes to develop
+                        products that meet the needs of users.
+                      </p>
+                    </li>
+                    <li>
+                      <p class="text-16 font-weight-400 text-black">
+                        <span class="font-weight-700"
+                          >User Interface (UI) and User Experience (UX)
+                          Design:</span
+                        >
+                        UI designers focus on the visual aspects of an
+                        application or website, while UX designers are concerned
+                        with the overall user experience, including usability
+                        and user satisfaction.
+                      </p>
+                    </li>
+                  </ol>
+                </div>
+              </div>
+            </div>
           </main>
 
           <div class="message-box w-100">
@@ -1172,7 +1222,10 @@
               >
                 <img class="icon" src="./assets/images/icons/send.svg" alt="" />
               </button>
-              <button class="clear-prompt-btn d-none"  ><span class="icon plus" style="transform: rotate(45deg);"> </span></button>
+              <button class="clear-prompt-btn d-none">
+                <span class="icon plus" style="transform: rotate(45deg)">
+                </span>
+              </button>
             </div>
           </div>
           <footer class="py-4 px-3">
@@ -1209,7 +1262,7 @@
                   name=""
                   id=""
                 >
-                Request ELT Sales Support
+                  Request ELT Sales Support
                 </p>
               </div>
             </div>
