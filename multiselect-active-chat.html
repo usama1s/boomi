@@ -1,0 +1,1523 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>boomi</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+      integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+      crossorigin="anonymous"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/style-dark.css" />
+
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body class="">
+    <main class="overflow-hidden main-body">
+      <div class="pink-blur-circle"></div>
+      <div class="blue-blur-circle"></div>
+      <section class="sidebar position-relative">
+        <input type="checkbox" id="sidebar-toggler-inp" hidden checked />
+        <label class="sidebar-toggler" for="sidebar-toggler-inp">
+          <img src="./assets/images/icons/arrow-double.svg" alt="" />
+        </label>
+        <div class="sidebar-content">
+          <div class="">
+            <div class="top-content">
+              <div
+                class="py-4 d-flex align-items-center justify-content-center"
+              >
+                <img
+                  class="mode-light-asset"
+                  src="./assets/images/logo-light.png"
+                  alt=""
+                />
+                <img
+                  class="mode-dark-asset"
+                  src="./assets/images/logo-dark.png"
+                  alt=""
+                />
+              </div>
+              <button
+                class="big-btn new-chat-btn text-14 text-center mb-4 mt-3 active"
+                onclick=" window.location.href = 'index.html';"
+              >
+                <p class="mb-0">
+                  <span class="icon plus"> </span>
+                  <span class="icon plus minus"> </span>
+                  New Chat
+                </p>
+              </button>
+            </div>
+
+            <div id="chats-accordion">
+              <div class="sidebar-chat-container">
+                <button
+                  class="d-flex flex-row align-items-center justify-content-start mt-2 chat-list-title"
+                  data-toggle="collapse"
+                  data-target="#pinned-chats-accodion"
+                  aria-expanded="true"
+                >
+                  <div
+                    class="small-btn d-flex align-items-center justify-content-center"
+                  >
+                    <img src="./assets/images/icons/chat.svg" alt="" />
+                  </div>
+
+                  <p class="text-20 text-blue ml-2 pl-1 mb-0">Pinned Chats</p>
+                </button>
+                <div
+                  class="chats-list collapse show"
+                  id="pinned-chats-accodion"
+                  data-parent="#chats-accordion"
+                >
+                  <div
+                    class="d-flex flex-row align-items-center justify-content-between w-100 py-3 chat-btn"
+                  >
+                    <a href="active-chat.html">
+                      <p
+                        class="text-14 text-blue text-left mb-1 pr-2 text-truncate"
+                      >
+                        Request ELT Sales Support
+                      </p>
+                      <span class="text-11 text-grey d-block text-left"
+                        >31 mar 2023, 11:00PM
+                      </span>
+                    </a>
+                    <div class="dropdown">
+                      <button
+                        class="dropdown-toggle d-block py-0 px-1 options-btn"
+                        type="button"
+                        id="chatOptionsDropDown"
+                        data-toggle="dropdown"
+                        aria-haspopup="true"
+                        aria-expanded="false"
+                      >
+                        <img src="./assets/images/icons/3dots.svg" alt="" />
+                      </button>
+                      <div
+                        class="dropdown-menu options"
+                        aria-labelledby="chatOptionsDropDown"
+                      >
+                        <div class="text-11 text-blue">
+                          <button
+                            class=""
+                            data-toggle="modal"
+                            data-target="#pinChatModal"
+                          >
+                            <img
+                              class="mr-2"
+                              src="./assets/images/icons/pin.svg"
+                              alt=""
+                            />
+                            Pin
+                          </button>
+                          <button class="">
+                            <img
+                              class="mr-2"
+                              src="./assets/images/icons/edit.png"
+                              alt=""
+                            />
+                            Edit
+                          </button>
+                          <button class="">
+                            <img
+                              class="mr-2"
+                              src="./assets/images/icons/multiply.svg"
+                              alt=""
+                            />
+                            Delete
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="d-flex flex-row align-items-center justify-content-between w-100 py-3 chat-btn"
+                  >
+                    <a href="active-chat.html">
+                      <p
+                        class="text-14 text-blue text-left mb-1 pr-2 text-truncate"
+                      >
+                        IPaaS Market Research
+                      </p>
+                      <span class="text-11 text-grey d-block text-left"
+                        >31 mar 2023, 11:00PM
+                      </span>
+                    </a>
+                    <div class="dropdown">
+                      <button
+                        class="dropdown-toggle d-block py-0 px-1 options-btn"
+                        type="button"
+                        id="chatOptionsDropDown"
+                        data-toggle="dropdown"
+                        aria-haspopup="true"
+                        aria-expanded="false"
+                      >
+                        <img src="./assets/images/icons/3dots.svg" alt="" />
+                      </button>
+                      <div
+                        class="dropdown-menu options"
+                        aria-labelledby="chatOptionsDropDown"
+                      >
+                        <div class="text-11 text-blue">
+                          <button
+                            class=""
+                            data-toggle="modal"
+                            data-target="#pinChatModal"
+                          >
+                            <img
+                              class="mr-2"
+                              src="./assets/images/icons/pin.svg"
+                              alt=""
+                            />
+                            Pin
+                          </button>
+                          <button class="">
+                            <img
+                              class="mr-2"
+                              src="./assets/images/icons/edit.png"
+                              alt=""
+                            />
+                            Edit
+                          </button>
+                          <button class="">
+                            <img
+                              class="mr-2"
+                              src="./assets/images/icons/multiply.svg"
+                              alt=""
+                            />
+                            Delete
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="d-flex flex-row align-items-center justify-content-between w-100 py-3 chat-btn"
+                  >
+                    <a href="active-chat.html">
+                      <p
+                        class="text-14 text-blue text-left mb-1 pr-2 text-truncate"
+                      >
+                        Role-play sales objections are the
+                      </p>
+                      <span class="text-11 text-grey d-block text-left"
+                        >31 mar 2023, 11:00PM
+                      </span>
+                    </a>
+                    <div class="dropdown">
+                      <button
+                        class="dropdown-toggle d-block py-0 px-1 options-btn"
+                        type="button"
+                        id="chatOptionsDropDown"
+                        data-toggle="dropdown"
+                        aria-haspopup="true"
+                        aria-expanded="false"
+                      >
+                        <img src="./assets/images/icons/3dots.svg" alt="" />
+                      </button>
+                      <div
+                        class="dropdown-menu options"
+                        aria-labelledby="chatOptionsDropDown"
+                      >
+                        <div class="text-11 text-blue">
+                          <button
+                            class=""
+                            data-toggle="modal"
+                            data-target="#pinChatModal"
+                          >
+                            <img
+                              class="mr-2"
+                              src="./assets/images/icons/pin.svg"
+                              alt=""
+                            />
+                            Pin
+                          </button>
+                          <button class="">
+                            <img
+                              class="mr-2"
+                              src="./assets/images/icons/edit.png"
+                              alt=""
+                            />
+                            Edit
+                          </button>
+                          <button class="">
+                            <img
+                              class="mr-2"
+                              src="./assets/images/icons/multiply.svg"
+                              alt=""
+                            />
+                            Delete
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="sidebar-chat-container">
+                <button
+                  class="d-flex flex-row align-items-center justify-content-start mt-2 chat-list-title collapsed"
+                  data-toggle="collapse"
+                  data-target="#recent-chats-accodion"
+                  aria-expanded="true"
+                >
+                  <div
+                    class="small-btn d-flex align-items-center justify-content-center"
+                  >
+                    <img src="./assets/images/icons/chat.svg" alt="" />
+                  </div>
+
+                  <p class="text-20 text-blue ml-2 pl-1 mb-0">Recent Chats</p>
+                </button>
+                <div
+                  class="chats-list collapse"
+                  id="recent-chats-accodion"
+                  data-parent="#chats-accordion"
+                >
+                  <div
+                    class="d-flex flex-row align-items-center justify-content-between w-100 py-3 chat-btn"
+                  >
+                    <a href="active-chat.html">
+                      <p
+                        class="text-14 text-blue text-left mb-1 pr-2 text-truncate"
+                      >
+                        Request ELT Sales Support
+                      </p>
+                      <span class="text-11 text-grey d-block text-left"
+                        >31 mar 2023, 11:00PM
+                      </span>
+                    </a>
+                    <div class="dropdown">
+                      <button
+                        class="dropdown-toggle d-block py-0 px-1 options-btn"
+                        type="button"
+                        id="chatOptionsDropDown"
+                        data-toggle="dropdown"
+                        aria-haspopup="true"
+                        aria-expanded="false"
+                      >
+                        <img src="./assets/images/icons/3dots.svg" alt="" />
+                      </button>
+                      <div
+                        class="dropdown-menu options"
+                        aria-labelledby="chatOptionsDropDown"
+                      >
+                        <div class="text-11 text-blue">
+                          <button
+                            class=""
+                            data-toggle="modal"
+                            data-target="#pinChatModal"
+                          >
+                            <img
+                              class="mr-2"
+                              src="./assets/images/icons/pin.svg"
+                              alt=""
+                            />
+                            Pin
+                          </button>
+                          <button class="">
+                            <img
+                              class="mr-2"
+                              src="./assets/images/icons/edit.png"
+                              alt=""
+                            />
+                            Edit
+                          </button>
+                          <button class="">
+                            <img
+                              class="mr-2"
+                              src="./assets/images/icons/multiply.svg"
+                              alt=""
+                            />
+                            Delete
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="d-flex flex-row align-items-center justify-content-between w-100 py-3 chat-btn"
+                  >
+                    <a href="active-chat.html">
+                      <p
+                        class="text-14 text-blue text-left mb-1 pr-2 text-truncate"
+                      >
+                        IPaaS Market Research
+                      </p>
+                      <span class="text-11 text-grey d-block text-left"
+                        >31 mar 2023, 11:00PM
+                      </span>
+                    </a>
+                    <div class="dropdown">
+                      <button
+                        class="dropdown-toggle d-block py-0 px-1 options-btn"
+                        type="button"
+                        id="chatOptionsDropDown"
+                        data-toggle="dropdown"
+                        aria-haspopup="true"
+                        aria-expanded="false"
+                      >
+                        <img src="./assets/images/icons/3dots.svg" alt="" />
+                      </button>
+                      <div
+                        class="dropdown-menu options"
+                        aria-labelledby="chatOptionsDropDown"
+                      >
+                        <div class="text-11 text-blue">
+                          <button
+                            class=""
+                            data-toggle="modal"
+                            data-target="#pinChatModal"
+                          >
+                            <img
+                              class="mr-2"
+                              src="./assets/images/icons/pin.svg"
+                              alt=""
+                            />
+                            Pin
+                          </button>
+                          <button class="">
+                            <img
+                              class="mr-2"
+                              src="./assets/images/icons/edit.png"
+                              alt=""
+                            />
+                            Edit
+                          </button>
+                          <button class="">
+                            <img
+                              class="mr-2"
+                              src="./assets/images/icons/multiply.svg"
+                              alt=""
+                            />
+                            Delete
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="d-flex flex-row align-items-center justify-content-between w-100 py-3 chat-btn"
+                  >
+                    <a href="active-chat.html">
+                      <p
+                        class="text-14 text-blue text-left mb-1 pr-2 text-truncate"
+                      >
+                        Role-play sales objections are the
+                      </p>
+                      <span class="text-11 text-grey d-block text-left"
+                        >31 mar 2023, 11:00PM
+                      </span>
+                    </a>
+                    <div class="dropdown">
+                      <button
+                        class="dropdown-toggle d-block py-0 px-1 options-btn"
+                        type="button"
+                        id="chatOptionsDropDown"
+                        data-toggle="dropdown"
+                        aria-haspopup="true"
+                        aria-expanded="false"
+                      >
+                        <img src="./assets/images/icons/3dots.svg" alt="" />
+                      </button>
+                      <div
+                        class="dropdown-menu options"
+                        aria-labelledby="chatOptionsDropDown"
+                      >
+                        <div class="text-11 text-blue">
+                          <button
+                            class=""
+                            data-toggle="modal"
+                            data-target="#pinChatModal"
+                          >
+                            <img
+                              class="mr-2"
+                              src="./assets/images/icons/pin.svg"
+                              alt=""
+                            />
+                            Pin
+                          </button>
+                          <button class="">
+                            <img
+                              class="mr-2"
+                              src="./assets/images/icons/edit.png"
+                              alt=""
+                            />
+                            Edit
+                          </button>
+                          <button class="">
+                            <img
+                              class="mr-2"
+                              src="./assets/images/icons/multiply.svg"
+                              alt=""
+                            />
+                            Delete
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="d-flex flex-row align-items-center justify-content-between w-100 py-3 chat-btn"
+                  >
+                    <a href="active-chat.html">
+                      <p
+                        class="text-14 text-blue text-left mb-1 pr-2 text-truncate"
+                      >
+                        Hoffman framework(refer to as )
+                      </p>
+                      <span class="text-11 text-grey d-block text-left"
+                        >31 mar 2023, 11:00PM
+                      </span>
+                    </a>
+                    <div class="dropdown">
+                      <button
+                        class="dropdown-toggle d-block py-0 px-1 options-btn"
+                        type="button"
+                        id="chatOptionsDropDown"
+                        data-toggle="dropdown"
+                        aria-haspopup="true"
+                        aria-expanded="false"
+                      >
+                        <img src="./assets/images/icons/3dots.svg" alt="" />
+                      </button>
+                      <div
+                        class="dropdown-menu options"
+                        aria-labelledby="chatOptionsDropDown"
+                      >
+                        <div class="text-11 text-blue">
+                          <button
+                            class=""
+                            data-toggle="modal"
+                            data-target="#pinChatModal"
+                          >
+                            <img
+                              class="mr-2"
+                              src="./assets/images/icons/pin.svg"
+                              alt=""
+                            />
+                            Pin
+                          </button>
+                          <button class="">
+                            <img
+                              class="mr-2"
+                              src="./assets/images/icons/edit.png"
+                              alt=""
+                            />
+                            Edit
+                          </button>
+                          <button class="">
+                            <img
+                              class="mr-2"
+                              src="./assets/images/icons/multiply.svg"
+                              alt=""
+                            />
+                            Delete
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="d-flex flex-row align-items-center justify-content-between w-100 py-3 chat-btn"
+                  >
+                    <a href="active-chat.html">
+                      <p
+                        class="text-14 text-blue text-left mb-1 pr-2 text-truncate"
+                      >
+                        Golden pitch sales quiz have one thing
+                      </p>
+                      <span class="text-11 text-grey d-block text-left"
+                        >31 mar 2023, 11:00PM
+                      </span>
+                    </a>
+                    <div class="dropdown">
+                      <button
+                        class="dropdown-toggle d-block py-0 px-1 options-btn"
+                        type="button"
+                        id="chatOptionsDropDown"
+                        data-toggle="dropdown"
+                        aria-haspopup="true"
+                        aria-expanded="false"
+                      >
+                        <img src="./assets/images/icons/3dots.svg" alt="" />
+                      </button>
+                      <div
+                        class="dropdown-menu options"
+                        aria-labelledby="chatOptionsDropDown"
+                      >
+                        <div class="text-11 text-blue">
+                          <button
+                            class=""
+                            data-toggle="modal"
+                            data-target="#pinChatModal"
+                          >
+                            <img
+                              class="mr-2"
+                              src="./assets/images/icons/pin.svg"
+                              alt=""
+                            />
+                            Pin
+                          </button>
+                          <button class="">
+                            <img
+                              class="mr-2"
+                              src="./assets/images/icons/edit.png"
+                              alt=""
+                            />
+                            Edit
+                          </button>
+                          <button class="">
+                            <img
+                              class="mr-2"
+                              src="./assets/images/icons/multiply.svg"
+                              alt=""
+                            />
+                            Delete
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="right-pane d-flex flex-column flex-grow-1">
+        <nav
+          class="d-flex flex-row align-items-center justify-content-end overflow-visible"
+        >
+          <input type="radio" name="nav-btns-inp" id="closeAlll" hidden />
+          <div>
+            <input
+              type="radio"
+              class="nav-btns-inp"
+              name="nav-btns-inp"
+              id="prompts"
+              hidden
+            />
+            <label
+              class="d-flex align-items-center mx-2 nav-btn overflow-visible"
+              for="prompts"
+            >
+              <span class="text-13 text-blue mr-1">Prompts</span>
+              <img src="./assets/images/icons/prompts.svg" alt="" />
+            </label>
+            <div class="nav-btn-submenu">
+              <div class="">
+                <label class="d-flex align-items-center closee" for="closeAlll">
+                  <img
+                    class="mr-1"
+                    src="./assets/images/icons/multiply.svg"
+                    alt=""
+                  />
+                  <span class="text-11 text-blue">Close</span>
+                </label>
+                <h4 class="text-16 text-blue pb-2 px-3">Prompts</h4>
+
+                <div class="list">
+                  <div class="d-flex flex-column align-items-start">
+                    <a class="text-14 text-blue my-0"
+                      >Request ELT Sales Support</a
+                    >
+                    <div class="px-3 w-100"><hr /></div>
+                    <a class="text-14 text-blue my-0"
+                      >Hoffman Framework (Referral)</a
+                    >
+                    <div class="px-3 w-100"><hr /></div>
+                    <a class="text-14 text-blue my-0"
+                      >Outbound Work History-Based</a
+                    >
+                    <div class="px-3 w-100"><hr /></div>
+                    <a class="text-14 text-blue my-0"
+                      >Hoffman Framework (Time)</a
+                    >
+                    <div class="px-3 w-100"><hr /></div>
+                    <a class="text-14 text-blue my-0">Email Marketing</a>
+                    <div class="px-3 w-100"><hr /></div>
+                    <a class="text-14 text-blue my-0">Sales Funnel</a>
+                    <div class="px-3 w-100"><hr /></div>
+                    <a class="text-14 text-blue my-0">General</a>
+                    <div class="px-3 w-100"><hr /></div>
+                    <a class="text-14 text-blue my-0">Copy Writing</a>
+                    <div class="px-3 w-100"><hr /></div>
+                    <a class="text-14 text-blue mY-0">Blog Articles</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <input
+              type="radio"
+              class="nav-btns-inp"
+              name="nav-btns-inp"
+              id="attributes"
+              hidden
+            />
+            <label
+              class="d-flex align-items-center mr-4 ml-2 nav-btn overflow-visible"
+              for="attributes"
+            >
+              <span class="text-13 text-blue mr-1">Data</span>
+              <img src="./assets/images/icons/data.svg" alt="" />
+            </label>
+            <div class="nav-btn-submenu">
+              <div>
+                <label class="d-flex align-items-center closee" for="closeAlll">
+                  <img
+                    class="mr-1"
+                    src="./assets/images/icons/multiply.svg"
+                    alt=""
+                  />
+                  <span class="text-11 text-blue">Close</span>
+                </label>
+
+                <h3 class="text-16 text-blue mb-3 pb-1">Chat Attributes</h3>
+
+                <div class="list">
+                  <div class="d-flex flex-column align-items-start">
+                    <h4 class="text-14 text-blue mb-2 pb-1 attributes-title">
+                      Contacts
+                      <div class="options">
+                        <div class="text-11 text-blue">
+                          <button class="">
+                            <img
+                              class="mr-2"
+                              src="./assets/images/icons/multiply.svg"
+                              style="transform: rotate(45deg)"
+                              alt=""
+                            />
+                            Add
+                          </button>
+                        </div>
+                      </div>
+                    </h4>
+
+                    <div
+                      class="d-flex flex-row align-items-center justify-content-between options-item w-100"
+                    >
+                      <p class="text-13 text-blue text-truncate">
+                        Jim Dandy, Boomi sales Representative
+                      </p>
+                      <div class="dropdown">
+                        <button
+                          class="dropdown-toggle d-block py-0 px-1 options-btn"
+                          type="button"
+                          id="chatOptionsDropDown"
+                          data-toggle="dropdown"
+                          aria-haspopup="true"
+                          aria-expanded="false"
+                        >
+                          <img src="./assets/images/icons/3dots.svg" alt="" />
+                        </button>
+                        <div
+                          class="dropdown-menu options"
+                          aria-labelledby="chatOptionsDropDown"
+                        >
+                          <div class="text-11 text-blue">
+                            <button class="">
+                              <img
+                                class="mr-2"
+                                src="./assets/images/icons/eye.svg"
+                                alt=""
+                              />
+                              View
+                            </button>
+                            <button class="">
+                              <img
+                                class="mr-2"
+                                src="./assets/images/icons/edit.png"
+                                alt=""
+                              />
+                              Edit
+                            </button>
+                            <button class="">
+                              <img
+                                class="mr-2"
+                                src="./assets/images/icons/multiply.svg"
+                                alt=""
+                              />
+                              Delete
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="d-flex flex-row align-items-center justify-content-between options-item w-100"
+                    >
+                      <p class="text-13 text-blue text-truncate">
+                        Steve Lucas, Boomi CEO
+                      </p>
+                      <div class="dropdown">
+                        <button
+                          class="dropdown-toggle d-block py-0 px-1 options-btn"
+                          type="button"
+                          id="chatOptionsDropDown"
+                          data-toggle="dropdown"
+                          aria-haspopup="true"
+                          aria-expanded="false"
+                        >
+                          <img src="./assets/images/icons/3dots.svg" alt="" />
+                        </button>
+                        <div
+                          class="dropdown-menu options"
+                          aria-labelledby="chatOptionsDropDown"
+                        >
+                          <div class="text-11 text-blue">
+                            <button class="">
+                              <img
+                                class="mr-2"
+                                src="./assets/images/icons/eye.svg"
+                                alt=""
+                              />
+                              View
+                            </button>
+                            <button class="">
+                              <img
+                                class="mr-2"
+                                src="./assets/images/icons/edit.png"
+                                alt=""
+                              />
+                              Edit
+                            </button>
+                            <button class="">
+                              <img
+                                class="mr-2"
+                                src="./assets/images/icons/multiply.svg"
+                                alt=""
+                              />
+                              Delete
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="d-flex flex-row align-items-center justify-content-between options-item w-100"
+                    >
+                      <p class="text-13 text-blue text-truncate">
+                        Joe Brown, Artemis CEO
+                      </p>
+                      <div class="dropdown">
+                        <button
+                          class="dropdown-toggle d-block py-0 px-1 options-btn"
+                          type="button"
+                          id="chatOptionsDropDown"
+                          data-toggle="dropdown"
+                          aria-haspopup="true"
+                          aria-expanded="false"
+                        >
+                          <img src="./assets/images/icons/3dots.svg" alt="" />
+                        </button>
+                        <div
+                          class="dropdown-menu options"
+                          aria-labelledby="chatOptionsDropDown"
+                        >
+                          <div class="text-11 text-blue">
+                            <button class="">
+                              <img
+                                class="mr-2"
+                                src="./assets/images/icons/eye.svg"
+                                alt=""
+                              />
+                              View
+                            </button>
+                            <button class="">
+                              <img
+                                class="mr-2"
+                                src="./assets/images/icons/edit.png"
+                                alt=""
+                              />
+                              Edit
+                            </button>
+                            <button class="">
+                              <img
+                                class="mr-2"
+                                src="./assets/images/icons/multiply.svg"
+                                alt=""
+                              />
+                              Delete
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="px-1 w-100 my-4"><hr /></div>
+
+                    <h4 class="text-14 text-blue mb-2 pb-1 attributes-title">
+                      Account
+                      <div class="options">
+                        <div class="text-11 text-blue">
+                          <button class="">
+                            <img
+                              class="mr-2"
+                              src="./assets/images/icons/multiply.svg"
+                              style="transform: rotate(45deg)"
+                              alt=""
+                            />
+                            Add
+                          </button>
+                        </div>
+                      </div>
+                    </h4>
+                    <div
+                      class="d-flex flex-row align-items-center justify-content-between options-item w-100"
+                    >
+                      <p class="text-13 text-blue text-truncate">
+                        Artemis Consulting
+                      </p>
+                      <div class="dropdown">
+                        <button
+                          class="dropdown-toggle d-block py-0 px-1 options-btn"
+                          type="button"
+                          id="chatOptionsDropDown"
+                          data-toggle="dropdown"
+                          aria-haspopup="true"
+                          aria-expanded="false"
+                        >
+                          <img src="./assets/images/icons/3dots.svg" alt="" />
+                        </button>
+                        <div
+                          class="dropdown-menu options"
+                          aria-labelledby="chatOptionsDropDown"
+                        >
+                          <div class="text-11 text-blue">
+                            <button class="">
+                              <img
+                                class="mr-2"
+                                src="./assets/images/icons/eye.svg"
+                                alt=""
+                              />
+                              View
+                            </button>
+                            <button class="">
+                              <img
+                                class="mr-2"
+                                src="./assets/images/icons/edit.png"
+                                alt=""
+                              />
+                              Edit
+                            </button>
+                            <button class="">
+                              <img
+                                class="mr-2"
+                                src="./assets/images/icons/multiply.svg"
+                                alt=""
+                              />
+                              Delete
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="px-1 w-100 my-4"><hr /></div>
+
+                    <h4 class="text-14 text-blue mb-2 pb-1 attributes-title">
+                      Opportunity
+                      <div class="options">
+                        <div class="text-11 text-blue">
+                          <button class="">
+                            <img
+                              class="mr-2"
+                              src="./assets/images/icons/multiply.svg"
+                              style="transform: rotate(45deg)"
+                              alt=""
+                            />
+                            Add
+                          </button>
+                        </div>
+                      </div>
+                    </h4>
+                    <div
+                      class="d-flex flex-row align-items-center justify-content-between options-item w-100"
+                    >
+                      <p class="text-13 text-blue text-truncate">
+                        Artmis_MDMRenewal_24
+                      </p>
+                      <div class="dropdown">
+                        <button
+                          class="dropdown-toggle d-block py-0 px-1 options-btn"
+                          type="button"
+                          id="chatOptionsDropDown"
+                          data-toggle="dropdown"
+                          aria-haspopup="true"
+                          aria-expanded="false"
+                        >
+                          <img src="./assets/images/icons/3dots.svg" alt="" />
+                        </button>
+                        <div
+                          class="dropdown-menu options"
+                          aria-labelledby="chatOptionsDropDown"
+                        >
+                          <div class="text-11 text-blue">
+                            <button class="">
+                              <img
+                                class="mr-2"
+                                src="./assets/images/icons/eye.svg"
+                                alt=""
+                              />
+                              View
+                            </button>
+                            <button class="">
+                              <img
+                                class="mr-2"
+                                src="./assets/images/icons/edit.png"
+                                alt=""
+                              />
+                              Edit
+                            </button>
+                            <button class="">
+                              <img
+                                class="mr-2"
+                                src="./assets/images/icons/multiply.svg"
+                                alt=""
+                              />
+                              Delete
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="px-1 w-100 my-4"><hr /></div>
+
+                    <h4 class="text-14 text-blue mb-2 pb-1 attributes-title">
+                      Other attributes
+                      <div class="options">
+                        <div class="text-11 text-blue">
+                          <button class="">
+                            <img
+                              class="mr-2"
+                              src="./assets/images/icons/multiply.svg"
+                              style="transform: rotate(45deg)"
+                              alt=""
+                            />
+                            Add
+                          </button>
+                        </div>
+                      </div>
+                    </h4>
+                    <h5
+                      class="text-13 font-weight-600 text-blue mb-0 mt-1 pt-1"
+                    >
+                      Deal notes
+                    </h5>
+                    <div
+                      class="d-flex flex-row align-items-center justify-content-between options-item w-100"
+                    >
+                      <p class="text-12 text-blue text-truncate">
+                        Platinum customer 5yr renewal, major competitive threat
+                        on this deal
+                      </p>
+                      <div class="dropdown">
+                        <button
+                          class="dropdown-toggle d-block py-0 px-1 options-btn"
+                          type="button"
+                          id="chatOptionsDropDown"
+                          data-toggle="dropdown"
+                          aria-haspopup="true"
+                          aria-expanded="false"
+                        >
+                          <img src="./assets/images/icons/3dots.svg" alt="" />
+                        </button>
+                        <div
+                          class="dropdown-menu options"
+                          aria-labelledby="chatOptionsDropDown"
+                        >
+                          <div class="text-11 text-blue">
+                            <button class="">
+                              <img
+                                class="mr-2"
+                                src="./assets/images/icons/eye.svg"
+                                alt=""
+                              />
+                              View
+                            </button>
+                            <button class="">
+                              <img
+                                class="mr-2"
+                                src="./assets/images/icons/edit.png"
+                                alt=""
+                              />
+                              Edit
+                            </button>
+                            <button class="">
+                              <img
+                                class="mr-2"
+                                src="./assets/images/icons/multiply.svg"
+                                alt=""
+                              />
+                              Delete
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="px-1 w-100 my-2"></div>
+
+                    <h5
+                      class="text-13 font-weight-600 text-blue mb-0 mt-1 pt-1"
+                    >
+                      Relationship Context
+                    </h5>
+                    <div
+                      class="d-flex flex-row align-items-center justify-content-between options-item w-100"
+                    >
+                      <p class="text-12 text-blue text-truncate">
+                        Steve knows joe brown from college roommates sophomore
+                        year
+                      </p>
+                      <div class="dropdown">
+                        <button
+                          class="dropdown-toggle d-block py-0 px-1 options-btn"
+                          type="button"
+                          id="chatOptionsDropDown"
+                          data-toggle="dropdown"
+                          aria-haspopup="true"
+                          aria-expanded="false"
+                        >
+                          <img src="./assets/images/icons/3dots.svg" alt="" />
+                        </button>
+                        <div
+                          class="dropdown-menu options"
+                          aria-labelledby="chatOptionsDropDown"
+                        >
+                          <div class="text-11 text-blue">
+                            <button class="">
+                              <img
+                                class="mr-2"
+                                src="./assets/images/icons/eye.svg"
+                                alt=""
+                              />
+                              View
+                            </button>
+                            <button class="">
+                              <img
+                                class="mr-2"
+                                src="./assets/images/icons/edit.png"
+                                alt=""
+                              />
+                              Edit
+                            </button>
+                            <button class="">
+                              <img
+                                class="mr-2"
+                                src="./assets/images/icons/multiply.svg"
+                                alt=""
+                              />
+                              Delete
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="px-1 w-100 my-2"></div>
+
+                    <h5
+                      class="text-13 font-weight-600 text-blue mb-0 mt-1 pt-1"
+                    >
+                      Prompt Action
+                    </h5>
+                    <div
+                      class="d-flex flex-row align-items-center justify-content-between options-item w-100"
+                    >
+                      <p class="text-12 text-blue text-truncate">
+                        ELT Outreach
+                      </p>
+                      <div class="dropdown">
+                        <button
+                          class="dropdown-toggle d-block py-0 px-1 options-btn"
+                          type="button"
+                          id="chatOptionsDropDown"
+                          data-toggle="dropdown"
+                          aria-haspopup="true"
+                          aria-expanded="false"
+                        >
+                          <img src="./assets/images/icons/3dots.svg" alt="" />
+                        </button>
+                        <div
+                          class="dropdown-menu options"
+                          aria-labelledby="chatOptionsDropDown"
+                        >
+                          <div class="text-11 text-blue">
+                            <button class="">
+                              <img
+                                class="mr-2"
+                                src="./assets/images/icons/eye.svg"
+                                alt=""
+                              />
+                              View
+                            </button>
+                            <button class="">
+                              <img
+                                class="mr-2"
+                                src="./assets/images/icons/edit.png"
+                                alt=""
+                              />
+                              Edit
+                            </button>
+                            <button class="">
+                              <img
+                                class="mr-2"
+                                src="./assets/images/icons/multiply.svg"
+                                alt=""
+                              />
+                              Delete
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="px-1 w-100 my-2"></div>
+
+                    <h5
+                      class="text-13 font-weight-600 text-blue mb-0 mt-1 pt-1"
+                    >
+                      Preferred Channel
+                    </h5>
+                    <div
+                      class="d-flex flex-row align-items-center justify-content-between options-item w-100"
+                    >
+                      <p class="text-12 text-blue text-truncate">SMS</p>
+                      <div class="dropdown">
+                        <button
+                          class="dropdown-toggle d-block py-0 px-1 options-btn"
+                          type="button"
+                          id="chatOptionsDropDown"
+                          data-toggle="dropdown"
+                          aria-haspopup="true"
+                          aria-expanded="false"
+                        >
+                          <img src="./assets/images/icons/3dots.svg" alt="" />
+                        </button>
+                        <div
+                          class="dropdown-menu options"
+                          aria-labelledby="chatOptionsDropDown"
+                        >
+                          <div class="text-11 text-blue">
+                            <button class="">
+                              <img
+                                class="mr-2"
+                                src="./assets/images/icons/eye.svg"
+                                alt=""
+                              />
+                              View
+                            </button>
+                            <button class="">
+                              <img
+                                class="mr-2"
+                                src="./assets/images/icons/edit.png"
+                                alt=""
+                              />
+                              Edit
+                            </button>
+                            <button class="">
+                              <img
+                                class="mr-2"
+                                src="./assets/images/icons/multiply.svg"
+                                alt=""
+                              />
+                              Delete
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="px-1 w-100 my-2"></div>
+
+                    <h5
+                      class="text-13 font-weight-600 text-blue mb-0 mt-1 pt-1"
+                    >
+                      Value Props
+                    </h5>
+                    <div
+                      class="d-flex flex-row align-items-center justify-content-between options-item w-100"
+                    >
+                      <p class="text-12 text-blue text-truncate">
+                        IT Integration, Data reliability, Reduce cost
+                      </p>
+                      <div class="dropdown">
+                        <button
+                          class="dropdown-toggle d-block py-0 px-1 options-btn"
+                          type="button"
+                          id="chatOptionsDropDown"
+                          data-toggle="dropdown"
+                          aria-haspopup="true"
+                          aria-expanded="false"
+                        >
+                          <img src="./assets/images/icons/3dots.svg" alt="" />
+                        </button>
+                        <div
+                          class="dropdown-menu options"
+                          aria-labelledby="chatOptionsDropDown"
+                        >
+                          <div class="text-11 text-blue">
+                            <button class="">
+                              <img
+                                class="mr-2"
+                                src="./assets/images/icons/eye.svg"
+                                alt=""
+                              />
+                              View
+                            </button>
+                            <button class="">
+                              <img
+                                class="mr-2"
+                                src="./assets/images/icons/edit.png"
+                                alt=""
+                              />
+                              Edit
+                            </button>
+                            <button class="">
+                              <img
+                                class="mr-2"
+                                src="./assets/images/icons/multiply.svg"
+                                alt=""
+                              />
+                              Delete
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="d-flex flex-row align-items-center">
+            <img
+              class="mode-dark-asset"
+              src="./assets/images/icons/mode-dark.svg"
+              alt=""
+            />
+            <img
+              class="mode-light-asset"
+              src="./assets/images/icons/mode-dark-2.svg"
+              alt=""
+            />
+            <input
+              class="custom-toggle"
+              type="checkbox"
+              id="light-dark-mode"
+              hidden
+            />
+            <label class="toggle mx-2" for="light-dark-mode">
+              <div class=""></div>
+            </label>
+            <img src="./assets/images/icons/mode-light.svg" alt="" />
+          </div>
+
+          <button class="mx-4">
+            <img src="./assets/images/icons/settings.svg" alt="" />
+          </button>
+
+          <button>
+            <div class="profile">
+              <img src="./assets/images/profile.png" alt="" />
+            </div>
+          </button>
+        </nav>
+
+        <div class="right-pane-content flex-grow-1 d-flex flex-column">
+          <!-- main content  -->
+          <main class="d-flex flex-grow-1 flex-column">
+            <div class="chat-section no-chat-title">
+              <div class="chat">
+                <div class="icon">
+                  <img src="./assets/images/ai.svg" alt="" />
+                </div>
+                <div class="text">
+                  <p class="text-16 font-weight-400 text-black">
+                    Confirm the ELT sponsor?
+                  </p>
+                </div>
+              </div>
+
+              <div class="chat">
+                <div class="icon">
+                  <img src="./assets/images/profile.png" alt="" />
+                </div>
+                <div class="text">
+                  <p class="text-16 font-weight-400 text-black">Sean Wechter</p>
+                </div>
+              </div>
+
+              <div class="chat">
+                <div class="icon">
+                  <img src="./assets/images/ai.svg" alt="" />
+                </div>
+                <div class="text">
+                  
+
+                  <div class="select-prompt multiselect">
+                    <button class="big-btn text-16 text-left">
+                      <p>Steve Lucas</p>
+                    </button>
+                    <button class="big-btn text-16 text-left">
+                      <p>Arlen Shenkman</p>
+                    </button>
+                    <button class="big-btn text-16 text-left">
+                      <p>Alison Biggen</p>
+                    </button>
+                    <button class="big-btn text-16 text-left">
+                      <p>Ed Mackowsky</p>
+                    </button>
+                    <button class="big-btn text-16 text-left">
+                      <p>Greg Wolfe</p>
+                    </button>
+                    <button class="big-btn text-16 text-left">
+                      <p>Dan Macallister</p>
+                    </button>
+                    <button class="big-btn text-16 text-left">
+                      <p>Josh Rutberg</p>
+                    </button>   
+                  </div>
+
+                  <div class="chat-social d-flex flex-row mt-2">
+                    <a href="">
+                      <img src="./assets/images/icons/like.svg" alt="" />
+                    </a>
+                    <a class="ml-3" href="">
+                      <img src="./assets/images/icons/dislike.svg" alt="" />
+                    </a>
+                    <a class="ml-3" href="">
+                      <img src="./assets/images/icons/filter.svg" alt="" />
+                    </a>
+                    <a class="ml-3" href="">
+                      <img src="./assets/images/icons/copy.svg" alt="" />
+                    </a>
+                    <a class="ml-3" href="">
+                      <img src="./assets/images/icons/share.svg" alt="" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </main>
+
+          <div class="message-box w-100">
+            <div
+              class="d-flex flex-row align-items-center justify-content-between"
+            >
+              <textarea
+                id="prompt-input"
+                class="flex-grow-1 h-100 bg-transparent border-0 text-15 text-blue overflow-hidden"
+                placeholder="Enter prompt here"
+              ></textarea>
+              <button
+                class="big-btn prompt-send-btn"
+                onclick=" window.location.href = 'active-chat.html';"
+                disabled
+              >
+                <img class="icon" src="./assets/images/icons/send.svg" alt="" />
+              </button>
+              <button class="clear-prompt-btn d-none">
+                <span class="icon plus" style="transform: rotate(45deg)">
+                </span>
+              </button>
+            </div>
+          </div>
+          <footer class="py-4 px-3">
+            <p class="text-14 text-blue text-center font-weight-400 mb-0">
+              Boomi-for-Boomi Innovation Showcase © 2023 Boomi, LP.
+            </p>
+          </footer>
+        </div>
+      </section>
+    </main>
+
+    <!-- Pin Modal -->
+    <div
+      class="modal fade"
+      id="pinChatModal"
+      tabindex="-1"
+      aria-labelledby="pinChatModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="text-20 text-blue" id="pinChatModalLabel">
+              Pin this chat
+            </h5>
+          </div>
+          <div
+            class="modal-body d-flex flex-column align-items-center justify-content-center"
+          >
+            <div class="message-box p-0 mb-3 d-flex align-items-center w-100">
+              <div class="d-flex align-items-center w-100 px-1">
+                <p
+                  class="text-14 text-blue px-3 w-100 d-flex align-items-center"
+                  name=""
+                  id=""
+                >
+                  Request ELT Sales Support
+                </p>
+              </div>
+            </div>
+            <div class="modal-footer p-0 w-100">
+              <button
+                type="button"
+                class="big-btn text-14 text-white text-center"
+                style="width: 100px"
+              >
+                <p class="mb-0">Pin</p>
+              </button>
+              <button
+                type="button"
+                class="border-btn text-14 text-orange text-center"
+                data-dismiss="modal"
+                style="width: 100px"
+              >
+                <p class="mb-0">Cancel</p>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script async src="./assets/js/toggleModes.js"></script>
+    <script async src="./assets/js/subMenu.js"></script>
+    <script async src="./assets/js/sideBarToggle.js"></script>
+    <script async src="./assets/js/prompt-input.js"></script>
+    <script async src="./assets/js/select-prompt.js"></script>
+  </body>
+</html>

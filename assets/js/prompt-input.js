@@ -20,6 +20,11 @@ $(".nav-btn-submenu .list a").click((event) => {
 
 $(".clear-prompt-btn").click((event) => {
   $("#prompt-input").val("").trigger("input");
+
+  if ($(".select-prompt").length>0) {
+    $(".select-prompt").find(".big-btn").removeClass("active");
+  }
+
 });
 
 

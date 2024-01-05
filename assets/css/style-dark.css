@@ -90,3 +90,8 @@ body.mode-dark .nav-btn-submenu .list a:hover{
   /* background-color: rgba(16, 13, 47, 0.25); */
   color: white !important;
 }
+
+
+.chat-social a img{
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(61deg) brightness(102%) contrast(103%);
+}
