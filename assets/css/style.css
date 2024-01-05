@@ -65,6 +65,36 @@ hr {
 .overflow-visible {
   overflow: visible;
 }
+.icon.edit{
+  display: block;
+  position: relative;
+  width: 15px;
+  height: 15px;
+  position: relative;
+}
+.icon.edit::after{
+  content: "";
+  width: 5px;
+  height: 10px;
+  border: 2px solid #969696;
+  transform: rotate(45deg);
+  position: absolute;
+  top: 2px;
+  left: 6px;
+  border-radius: 1px 1px 0px 0px;
+}
+.icon.edit::before{
+  content: "";
+  position: absolute;
+  bottom: 0.5px;
+  left: 1px;
+  width: 5px;
+  height: 5px;
+  border: 3px solid transparent;
+  border-bottom: 0;
+  border-top: 4px solid #969696;
+  transform: rotate(45deg) translate(-6%,6%);
+}
 .icon.plus {
   position: relative;
   width: 22px;
@@ -445,10 +475,10 @@ input.custom-toggle:checked + label > div {
   border-radius: 6px;
   background-color: rgba(204, 204, 204, 0.25);
 }
-.chat-btn .options-btn {
+.options-btn {
   position: relative;
 }
-.chat-btn .options-btn::before {
+.options-btn::before {
   content: "";
   position: absolute;
   left: 50%;
@@ -461,8 +491,12 @@ input.custom-toggle:checked + label > div {
   opacity: 0;
   transition: opacity 0.4s;
 }
-.chat-btn .options-btn.hovered::before,
-.chat-btn .options-btn:hover::before {
+.nav-btn-submenu .list .options-btn::before{
+  width: 25px;
+  height: 25px;
+}
+.options-btn.hovered::before,
+.options-btn:hover::before {
   opacity: 1;
 }
 .profile {
@@ -484,7 +518,7 @@ nav {
     rgba(255, 255, 255, 0.5) 67.5%,
     rgba(218, 242, 252, 0.5) 118.1%
   );
-  padding: 0 75px;
+  padding: 0 60px;
 }
 .nav-btn {
   padding: 1px 14px;
@@ -747,12 +781,17 @@ nav {
 
 /* chat section  */
 .chat-section {
-  padding: 25px 40px;
+  padding: 25px 60px 25px 40px;
   overflow: auto;
   height: calc(100vh - 280px);
+  margin-right: 10px;
+}
+.chat-section.edit-sec-open{
+  
+height: calc(100vh - 320px);
 }
 .chat-title-section{
-  padding: 20px 40px;
+  padding: 20px 60px 20px 40px;
   border-bottom: 1px solid rgba(141, 142, 145, 0.20);
 }
 .chat{
@@ -783,4 +822,31 @@ nav {
 .chat .text p {
   line-height: 2.5;
   margin-bottom: 0;
+}
+
+
+
+
+
+
+
+/* edit chat buttons  */
+.edit-chat-sec{
+
+}
+.edit-chat-sec .dropdown-toggle::after{
+display: none;
+}
+.edit-chat-sec .dropdown-menu{
+  position: static;
+  position: static !important;
+  transform: none !important;
+}
+
+
+.edit-chat-sec .dropdown-toggle[aria-expanded="true"] span::after{
+  border-color: #ff7c66;
+}
+.edit-chat-sec .dropdown-toggle[aria-expanded="true"] span::before{
+border-top-color: #ff7c66;
 }

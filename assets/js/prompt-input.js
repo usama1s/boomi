@@ -5,25 +5,25 @@ $("#prompt-input").bind("input propertychange", function (event) {
   if (inputVal.length > 0) {
     sendPromptBtn.addClass("active");
     sendPromptBtn.removeAttr("disabled");
+    $(".clear-prompt-btn").removeClass("d-none");
   } else {
     sendPromptBtn.removeClass("active");
     sendPromptBtn.attr("disabled", true);
+    $(".clear-prompt-btn").addClass("d-none");
   }
 });
 
 $(".nav-btn-submenu .list a").click((event) => {
   $("#prompt-input").val($(event.target).text()).trigger("input");
   $("#closeAlll").prop("checked", true);
-  $(".clear-prompt-btn").removeClass("d-none");
 });
 
 $(".clear-prompt-btn").click((event) => {
-  setTimeout(function () {
-    $("#prompts").prop("checked", true);
-  }, 200);
-
   $("#prompt-input").val("").trigger("input");
-  $(".clear-prompt-btn").addClass("d-none");
 });
 
 
+
+$("#editChatSec").click((event) => {
+  $(".chat-section").toggleClass("edit-sec-open");
+})
