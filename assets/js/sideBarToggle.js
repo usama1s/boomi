@@ -25,16 +25,38 @@ $(window).resize(function () {
 });
 
 function updateSideBarSize() {
-  var sidebarContent = $(".sidebar-content>div>div");
-  var totalHeight = sidebarContent.outerHeight();
-  $(".recent-chats-list").css("height", $(window).height() - totalHeight - 20);
+  var topContentHeight = $(".sidebar-content .top-content").outerHeight();
+  var buttonsHeight = $(
+    ".sidebar-chat-container .chat-list-title"
+  ).outerHeight();
+  var suggestedHeight =
+    $(window).height() - topContentHeight - 2 * buttonsHeight - 45;
+
+  console.log("sug", suggestedHeight);
+
+  $(".sidebar-content .chats-list").each(function () {
+    var outerHeight = $(this).outerHeight();
+    var outerHeight = 0;
+    $(this)
+      .children(".chat-btn")
+      .each(function () {
+        outerHeight += $(this).outerHeight();
+      });
+    outerHeight = outerHeight + 10;
+    if (outerHeight < suggestedHeight) {
+      $(this).css("height", outerHeight);
+    } else {
+      console.log("suggestedHeight");
+      $(this).css("height", suggestedHeight);
+    }
+  });
 }
 
-$(".recent-chat-btn .options-btn").mouseover(function () {
-  $(".recent-chat-btn .options-btn").removeClass("hovered");
+$(".chat-btn .options-btn").mouseover(function () {
+  $(".chat-btn .options-btn").removeClass("hovered");
   $(this).addClass("hovered");
 });
 
-$(".recent-chat-btn .options-btn").click((event) => {
-  $(".recent-chat-btn .options-btn").removeClass("hovered");
+$(".chat-btn .options-btn").click((event) => {
+  $(".chat-btn .options-btn").removeClass("hovered");
 });

@@ -11,13 +11,10 @@ $("#light-dark-mode").on("input", function() {
 
  $(document).ready(function() {
     var darkMode = localStorage.getItem("dark-mode");
-    console.log("load "+darkMode);
     if (darkMode!==null) {
         if (darkMode == "true") {
-            console.log("yes");
             $( "#light-dark-mode").prop("checked", true ).trigger("input"); 
         }else{
-            console.log("no");
             $( "#light-dark-mode").prop("checked", false ).trigger("input");
         }
         

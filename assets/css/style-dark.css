@@ -16,6 +16,7 @@ body.mode-dark .main-body::after {
 }
 body.mode-dark .pink-blur-circle {
     background: linear-gradient(138deg, rgba(255, 124, 102, 0.80) 25.79%, rgba(160, 50, 145, 0.80) 37.23%, rgba(14, 11, 46, 0.80) 59.3%);
+    filter: blur(150px);
 }
 
 body.mode-dark .blue-blur-circle {
@@ -38,6 +39,11 @@ body.mode-dark .text-grey{
 color: #B3CDD9;
 }
 
+body.mode-dark .text-black{
+  color: #FFFFFF;
+
+  }
+
 body.mode-dark .message-box>div{
     border: 1px solid rgba(219, 228, 239, 0.34);
 
@@ -58,7 +64,7 @@ body.mode-dark .options{
 
 }
 
-body.mode-dark .recent-chat-btn.active{
+body.mode-dark .chat-btn.active{
   background-color: rgba(16, 13, 47, 0.25);
 }
 body.mode-dark .modal-open .modal::before{
