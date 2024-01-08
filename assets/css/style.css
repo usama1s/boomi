@@ -9,7 +9,9 @@ body {
   padding: 0;
   font-family: "Montserrat", sans-serif;
 }
-
+.cursor-pointer{
+  cursor: pointer;
+}
 /* width */
 ::-webkit-scrollbar {
   width: 4px;
@@ -664,8 +666,11 @@ nav {
   padding: 10px 15px;
   margin: 15px 0 !important;
 }
+#attributes+label+.nav-btn-submenu .list a{
+  margin: 0 !important;
+}
 
-.nav-btn-submenu .list a:hover {
+.list a:hover {
   cursor: pointer;
   background-color: rgba(204, 204, 204, 0.25);
   border-radius: 6px;
@@ -982,4 +987,22 @@ nav {
 .select-prompt button p {
   line-height: 1.5 !important;
   padding: 10px 28px;
+}
+
+
+.search-results{
+  height: 150px;
+  /* overflow: auto; */
+  width: calc(100% - 110px) !important;
+  position: absolute;
+  top: 75px;
+  left: 24px;
+  z-index: 1;
+  background: #fff;
+  border: 1px solid #BBB;
+  border-radius: 7px;
+  padding: 0 10px 0 0px;
+}
+.search-results>div{
+  overflow: auto;
 }
