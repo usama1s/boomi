@@ -143,19 +143,22 @@ hr {
 
 .main-body::before {
   content: "";
-  width: 93%;
-  height: 61%;
+  width: 100%;
+  height: 100%;
   position: absolute;
   right: 0;
   top: 0;
-  transform: translate(20px, 24%);
+  transform: translate(20px, 0%);
+  background-image: linear-gradient(    91deg,    rgba(255, 255, 255, 0.5) 0%,    rgba(255, 255, 255, 0.45) 100%  ), url("../images/bg-light.png");
   background-image: url("../images/bg-light.png");
   background-size: 100% auto;
   background-repeat: no-repeat;
-  background-position: center right;
+  background-position: right 28%;
   opacity: 1;
   z-index: -3;
-  box-shadow: 0 0 100px 50px white inset;
+  box-shadow: 120px 179px 632px 0 white inset;
+  filter: blur(25px);
+  transition: all 0.4s;
 }
 
 .main-body::after {
@@ -168,10 +171,11 @@ hr {
   background: linear-gradient(
     91deg,
     rgba(255, 255, 255, 01) 40%,
-    rgba(255, 255, 255, 0) 80%
+    rgba(255, 255, 255, 0) 90%
   );
   backdrop-filter: blur(6px);
   z-index: -2;
+  transition: all 0.4s;
   transition: all 0.4s;
 }
 
@@ -190,6 +194,8 @@ hr {
   );
   z-index: -1;
   opacity: 1;
+  filter: blur(0px);
+  transition: all 0.4s;
 }
 
 .blue-blur-circle {
@@ -197,8 +203,8 @@ hr {
   right: 0;
   bottom: 0;
   transform: translate(40%, 40%);
-  width: 923px;
-  height: 923px;
+  width: 46vw;
+  height: 83vh;
   border-radius: 923px;
   background: linear-gradient(
     312deg,
@@ -208,6 +214,7 @@ hr {
   filter: blur(150px);
   z-index: -1;
   opacity: 1;
+  transition: all 0.4s;
 }
 
 .sidebar {
@@ -222,7 +229,17 @@ hr {
   max-width: 100%;
   overflow: hidden;
 }
-
+.sidebar .sidebar-content::before{
+  content: "";
+  display:block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: linear-gradient(180deg, #0E0B2E 64.95%, #261C52 98.41%);
+  z-index: -2;
+}
 .sidebar .sidebar-content > div {
   width: 344px;
   border-right: 2px solid #a03291;
