@@ -590,7 +590,7 @@ nav {
   left: 0;
   opacity: 0;
   transition: all 0.5s;
-  z-index: 11;
+  z-index: 5;
 }
 
 .nav-btn:hover::before,
@@ -784,7 +784,7 @@ nav {
 .settings:hover > button + div {
   opacity: 1;
   visibility: visible;
-  z-index: 0;
+  z-index: 5;
 }
 /* message box  */
 

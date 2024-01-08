@@ -121,3 +121,8 @@ body.mode-dark .settings > button + div {
   border: 1px solid #a03291;
   background: linear-gradient(279deg, #0e0b2e 0.26%, #261c52 97.33%);
 }
+
+body.mode-dark #searchChatModal a:hover,
+body.mode-dark #newDetailsModal a:hover{
+color: white !important;
+}
