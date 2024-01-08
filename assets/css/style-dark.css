@@ -5,7 +5,12 @@ body.mode-dark .mode-dark-asset {
   display: block;
 }
 body.mode-dark .main-body::before {
-  background-image: linear-gradient(    91deg,    rgba(14, 11, 46, 0.9) 25%,    rgba(14, 11, 46, 0.1) 43%  ), url("../images/bg-dark.png");
+  background-image: linear-gradient(
+      91deg,
+      rgba(14, 11, 46, 0.9) 25%,
+      rgba(14, 11, 46, 0.1) 43%
+    ),
+    url("../images/bg-dark.png");
   box-shadow: none;
   z-index: -2;
   opacity: 0.9;
@@ -16,83 +21,103 @@ body.mode-dark .main-body::after {
   z-index: -3;
 }
 body.mode-dark .pink-blur-circle {
-    background: linear-gradient(138deg, rgba(255, 124, 102, 0.80) 25.79%, rgba(160, 50, 145, 0.80) 37.23%, rgba(14, 11, 46, 0.80) 59.3%);
-    filter: blur(150px);
+  background: linear-gradient(
+    138deg,
+    rgba(255, 124, 102, 0.8) 25.79%,
+    rgba(160, 50, 145, 0.8) 37.23%,
+    rgba(14, 11, 46, 0.8) 59.3%
+  );
+  filter: blur(150px);
 }
 
 body.mode-dark .blue-blur-circle {
-
-background: linear-gradient(312deg, rgba(255, 124, 102, 0.70) 2.91%, rgba(160, 50, 145, 0.70) 54.09%, rgba(14, 11, 46, 0.70) 78.95%);
-
-
+  background: linear-gradient(
+    312deg,
+    rgba(255, 124, 102, 0.7) 2.91%,
+    rgba(160, 50, 145, 0.7) 54.09%,
+    rgba(14, 11, 46, 0.7) 78.95%
+  );
 }
 
-body.mode-dark nav{
-    border: 1px solid rgba(219, 228, 239, 0.20);
-    background: linear-gradient(267deg, rgba(14, 11, 46, 0.00) 59.33%, rgba(38, 28, 82, 0.41) 125.43%);
+body.mode-dark nav {
+  border: 1px solid rgba(219, 228, 239, 0.2);
+  background: linear-gradient(
+    267deg,
+    rgba(14, 11, 46, 0) 59.33%,
+    rgba(38, 28, 82, 0.41) 125.43%
+  );
 }
 
-body.mode-dark .text-blue{
-color: #ffffff;
+body.mode-dark .text-blue {
+  color: #ffffff;
 }
 
-body.mode-dark .text-grey{
-color: #B3CDD9;
+body.mode-dark .text-grey {
+  color: #b3cdd9;
 }
 
-body.mode-dark .text-black{
-  color: #FFFFFF;
-
-  }
-
-body.mode-dark .message-box>div{
-    border: 1px solid rgba(219, 228, 239, 0.34);
-
-    background: rgba(30, 31, 73, 0.50);
-
+body.mode-dark .text-black {
+  color: #ffffff;
 }
 
-body.mode-dark .nav-btn-submenu{
-    border: 1px solid rgba(219, 228, 239, 0.30);
+body.mode-dark .message-box > div {
+  border: 1px solid rgba(219, 228, 239, 0.34);
 
-    background: linear-gradient(180deg, rgba(14, 11, 46, 0.70) 64.95%, rgba(38, 28, 82, 0.70) 98.41%);
-
+  background: rgba(30, 31, 73, 0.5);
 }
 
-body.mode-dark .options{
-    border: 1px solid rgba(219, 228, 239, 0.29);
-    background: linear-gradient(93deg, rgba(30, 31, 73, 0.40) 73.04%, rgba(43, 36, 91, 0.40) 117.08%);
+body.mode-dark .nav-btn-submenu {
+  border: 1px solid rgba(219, 228, 239, 0.3);
 
+  background: linear-gradient(
+    180deg,
+    rgba(14, 11, 46, 0.7) 64.95%,
+    rgba(38, 28, 82, 0.7) 98.41%
+  );
 }
 
-body.mode-dark .chat-btn.active{
+body.mode-dark .options {
+  border: 1px solid rgba(219, 228, 239, 0.29);
+  background: linear-gradient(
+    93deg,
+    rgba(30, 31, 73, 0.4) 73.04%,
+    rgba(43, 36, 91, 0.4) 117.08%
+  );
+}
+
+body.mode-dark .chat-btn.active {
   background-color: rgba(16, 13, 47, 0.25);
 }
-body.mode-dark .modal-open .modal::before{
+body.mode-dark .modal-open .modal::before {
   opacity: 0.6;
-  background: rgba(7, 7, 7, 0.70);
+  background: rgba(7, 7, 7, 0.7);
   backdrop-filter: blur(10px);
 }
-body.mode-dark .modal-content{
+body.mode-dark .modal-content {
   border: 1px solid #686868;
 
-  background: #171E21;
+  background: #171e21;
 }
-body.mode-dark .modal-header{
-border-bottom: 1px solid #686868;
+body.mode-dark .modal-header {
+  border-bottom: 1px solid #686868;
 }
-body.mode-dark .modal .message-box>div{
+body.mode-dark .modal .message-box > div {
   border: 1px solid #686868;
 
-  background: #3C4245;
+  background: #3c4245;
 }
 
-body.mode-dark .nav-btn-submenu .list a:hover{
+body.mode-dark .nav-btn-submenu .list a:hover {
   /* background-color: rgba(16, 13, 47, 0.25); */
   color: white !important;
 }
 
+body.mode-dark .chat-social a img {
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(61deg)
+    brightness(102%) contrast(103%);
+}
 
-body.mode-dark .chat-social a img{
-  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(61deg) brightness(102%) contrast(103%);
+body.mode-dark .settings > button + div {
+  border: 1px solid #a03291;
+  background: linear-gradient(279deg, #0e0b2e 0.26%, #261c52 97.33%);
 }

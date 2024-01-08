@@ -684,7 +684,7 @@
               hidden
             />
             <label
-              class="d-flex align-items-center mr-4 ml-2 nav-btn overflow-visible"
+              class="d-flex align-items-center mr-0 ml-2 nav-btn overflow-visible"
               for="attributes"
             >
               <span class="text-13 text-blue mr-1">Data</span>
@@ -1348,34 +1348,37 @@
             </div>
           </div>
 
-          <div class="d-flex flex-row align-items-center">
-            <img
-              class="mode-dark-asset"
-              src="./assets/images/icons/mode-dark.svg"
-              alt=""
-            />
-            <img
-              class="mode-light-asset"
-              src="./assets/images/icons/mode-dark-2.svg"
-              alt=""
-            />
-            <input
-              class="custom-toggle"
-              type="checkbox"
-              id="light-dark-mode"
-              hidden
-            />
-            <label class="toggle mx-2" for="light-dark-mode">
-              <div class=""></div>
-            </label>
-            <img src="./assets/images/icons/mode-light.svg" alt="" />
+          <div class="ml-3 mr-4 position-relative settings">
+            <button>
+              <img src="./assets/images/icons/settings.svg" alt="" />
+            </button>
+            <div>
+              <div class="d-flex flex-row align-items-center">
+                <img
+                  class="mode-dark-asset"
+                  src="./assets/images/icons/mode-dark.svg"
+                  alt=""
+                />
+                <img
+                  class="mode-light-asset"
+                  src="./assets/images/icons/mode-dark-2.svg"
+                  alt=""
+                />
+                <input
+                  class="custom-toggle"
+                  type="checkbox"
+                  id="light-dark-mode"
+                  hidden
+                />
+                <label class="toggle mx-2" for="light-dark-mode">
+                  <div class=""></div>
+                </label>
+                <img src="./assets/images/icons/mode-light.svg" alt="" />
+              </div>
+            </div>
           </div>
 
-          <button class="mx-4">
-            <img src="./assets/images/icons/settings.svg" alt="" />
-          </button>
-
-          <button>
+          <button class="ml-1">
             <div class="profile">
               <img src="./assets/images/profile.png" alt="" />
             </div>
