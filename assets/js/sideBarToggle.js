@@ -32,7 +32,7 @@ function updateSideBarSize() {
   var suggestedHeight =
     $(window).height() - topContentHeight - 2 * buttonsHeight - 45;
 
-  console.log("sug", suggestedHeight);
+
 
   $(".sidebar-content .chats-list").each(function () {
     var outerHeight = $(this).outerHeight();
@@ -46,17 +46,7 @@ function updateSideBarSize() {
     if (outerHeight < suggestedHeight) {
       $(this).css("height", outerHeight);
     } else {
-      console.log("suggestedHeight");
       $(this).css("height", suggestedHeight);
     }
   });
 }
-
-$(".chat-btn .options-btn").mouseover(function () {
-  $(".chat-btn .options-btn").removeClass("hovered");
-  $(this).addClass("hovered");
-});
-
-$(".chat-btn .options-btn").click((event) => {
-  $(".chat-btn .options-btn").removeClass("hovered");
-});

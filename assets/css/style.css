@@ -552,7 +552,7 @@ input.custom-toggle:checked + label > div {
   height: 25px;
 }
 
-.options-btn.hovered::before,
+/* .options-btn.hovered::before, */
 .options-btn:hover::before {
   opacity: 1;
 }
@@ -824,9 +824,12 @@ nav {
 }
 
 .modal-open .modal {
-  display: flex !important;
+  /* display: flex !important;
   align-items: center;
-  justify-content: center;
+  justify-content: center; */
+  /* display: flex !important; */
+  /* align-items: center; */
+  /* justify-content: center; */
 }
 
 .modal-open .modal::before {
@@ -840,10 +843,16 @@ nav {
   background: rgba(199, 199, 199, 0.7);
   backdrop-filter: blur(10px);
 }
-
+.modal-dialog{
+  min-width: 531px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%) !important;
+}
 .modal-content {
   max-width: calc(100vw - 40px);
-  width: 531px;
+ 
   min-height: 264px;
   border-radius: 16px;
   border: 1px solid #bbb;

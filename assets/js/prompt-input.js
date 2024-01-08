@@ -1,14 +1,19 @@
 $("#prompt-input").bind("input propertychange", function (event) {
   var sendPromptBtn = $(event.target).siblings(".prompt-send-btn");
+  var newChatBtn = $(".new-chat-btn");
   var inputVal = event.target.value;
 
   if (inputVal.length > 0) {
     sendPromptBtn.addClass("active");
     sendPromptBtn.removeAttr("disabled");
+    newChatBtn.addClass("active");
+    newChatBtn.removeAttr("disabled");
     $(".clear-prompt-btn").removeClass("d-none");
   } else {
     sendPromptBtn.removeClass("active");
     sendPromptBtn.attr("disabled", true);
+    newChatBtn.removeClass("active");
+    newChatBtn.attr("disabled", true);
     $(".clear-prompt-btn").addClass("d-none");
   }
 });
