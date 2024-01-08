@@ -73,39 +73,6 @@ hr {
   overflow: visible;
 }
 
-.icon.edit {
-  display: block;
-  position: relative;
-  width: 15px;
-  height: 15px;
-  position: relative;
-}
-
-.icon.edit::after {
-  content: "";
-  width: 5px;
-  height: 10px;
-  border: 2px solid #969696;
-  transform: rotate(45deg);
-  position: absolute;
-  top: 2px;
-  left: 6px;
-  border-radius: 1px 1px 0px 0px;
-}
-
-.icon.edit::before {
-  content: "";
-  position: absolute;
-  bottom: 0.5px;
-  left: 1px;
-  width: 5px;
-  height: 5px;
-  border: 3px solid transparent;
-  border-bottom: 0;
-  border-top: 4px solid #969696;
-  transform: rotate(45deg) translate(-6%, 6%);
-}
-
 .icon.plus {
   position: relative;
   width: 22px;
@@ -1003,13 +970,11 @@ nav {
   transform: none !important;
 }
 
-.edit-chat-sec .dropdown-toggle[aria-expanded="true"] span::after {
-  border-color: #ff7c66;
+.edit-chat-sec .dropdown-toggle[aria-expanded="true"] img{
+  filter: invert(35%) sepia(75%) saturate(1548%) hue-rotate(320deg)
+  brightness(101%) contrast(95%);
 }
 
-.edit-chat-sec .dropdown-toggle[aria-expanded="true"] span::before {
-  border-top-color: #ff7c66;
-}
 
 /* select prompt from list  */
 .select-prompt {
