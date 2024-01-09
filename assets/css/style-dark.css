@@ -126,3 +126,7 @@ body.mode-dark #searchChatModal a:hover,
 body.mode-dark #newDetailsModal a:hover{
 color: white !important;
 }
+
+body.mode-dark .select-prompt button:not(.active):hover{
+  background-color: rgba(204, 204, 204, 0.25);
+}

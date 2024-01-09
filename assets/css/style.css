@@ -990,6 +990,9 @@ nav {
   width: fit-content;
   min-height: 54px;
 }
+.select-prompt button:not(.active):hover{
+  background: rgba(30, 31, 73, 0.4);
+}
 .select-prompt .big-btn.active {
   border: 1px solid transparent;
 }
@@ -1013,4 +1016,14 @@ nav {
 }
 .search-results > div {
   overflow: auto;
+}
+.conversation-commands a{
+  transition: filter, transform 0.5s;
+  transform-origin: center;
+}
+
+.conversation-commands a:hover img{
+  filter: invert(35%) sepia(75%) saturate(1548%) hue-rotate(320deg)
+  brightness(101%) contrast(95%);
+  transform: scale(1.15);
 }
