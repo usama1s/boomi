@@ -15,3 +15,6 @@ $("#prompts, #attributes, #closeAlll").change((event) => {
 });
 
 
+$(".promptFilter .dropdown-menu").click(function(event){
+  event.stopPropagation();
+});

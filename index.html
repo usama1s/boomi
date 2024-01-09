@@ -642,6 +642,81 @@
                   <span class="text-11 text-blue">Close</span>
                 </label>
                 <h4 class="text-16 text-blue pb-0 px-3 mb-0">Prompts</h4>
+                <div class="d-flex flex-row align-items-center mt-3">
+                  <div
+                    class="message-box p-0 d-flex align-items-center w-100 px-3"
+                  >
+                    <div class="d-flex align-items-center w-100 px-1">
+                      <input
+                        class="text-12 text-blue px-2 w-100 d-flex align-items-center"
+                        type="text"
+                        placeholder="Search Chat"
+                      />
+                    </div>
+                  </div>
+                  <div class="dropdown pr-2 promptFilter">
+                    <button
+                      class="dropdown-toggle d-block py-0 px-1"
+                      type="button"
+                      id="promptFilter"
+                      data-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                    >
+                      <img src="./assets/images/icons/filter.svg" alt="" />
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="promptFilter">
+                      <div class="d-flex flex-row">
+                        <input type="checkbox" id="trading" hidden />
+                        <label
+                          class="cursor-pointer text-12 text-black"
+                          for="trading"
+                          >Trading</label
+                        >
+                      </div>
+
+                      <div class="d-flex flex-row">
+                        <input type="checkbox" id="outbounds" hidden />
+                        <label
+                          class="cursor-pointer text-12 text-black"
+                          for="outbounds"
+                          >Outbounds</label
+                        >
+                      </div>
+
+                      <div class="d-flex flex-row">
+                        <input type="checkbox" id="research" hidden />
+                        <label
+                          class="cursor-pointer text-12 text-black"
+                          for="research"
+                          >Research</label
+                        >
+                      </div>
+
+                      <div class="d-flex flex-row">
+                        <input type="checkbox" id="lead-generation" hidden />
+                        <label
+                          class="cursor-pointer text-12 text-black"
+                          for="lead-generation"
+                          >Lead Generation</label
+                        >
+                      </div>
+
+                      <div class="d-flex flex-row">
+                        <input
+                          type="checkbox"
+                          id="meeting-preparation"
+                          hidden
+                        />
+                        <label
+                          class="cursor-pointer text-12 text-black"
+                          for="meeting-preparation"
+                          >Meeting Preparation</label
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
 
                 <div class="list" style="padding-top: 28px" id="prompts-menu">
                   <div class="d-flex flex-column align-items-start">
