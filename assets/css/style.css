@@ -765,12 +765,14 @@ nav {
 }
 
 /* setting menu  */
-
-.settings > button + div {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translate(-75%, calc(100% + 0px));
+.settings .dropdown-toggle::after{
+  display: none;
+}
+.settings .dropdown-menu {
+  position: absolute !important;
+  top: 0px !important;
+  left: 0% !important;
+  transform: translate(-70%, calc(40% + 0px)) !important;
   padding: 10px;
   border-radius: 5px;
   background: linear-gradient(
@@ -779,15 +781,10 @@ nav {
     rgba(218, 242, 252, 0.5) 118.1%
   );
   border: 1px solid rgba(167, 175, 186, 0.8);
-  opacity: 0;
-  visibility: hidden;
-  z-index: -2;
+  height: fit-content;
+  min-width: fit-content;
 }
-.settings:hover > button + div {
-  opacity: 1;
-  visibility: visible;
-  z-index: 5;
-}
+
 /* message box  */
 
 .message-box {

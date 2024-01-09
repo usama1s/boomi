@@ -1774,11 +1774,18 @@
           </div>
         </div>
 
-        <div class="ml-3 mr-4 position-relative settings">
-          <button>
+        <div class="dropdown ml-3 mr-4 position-relative settings">
+          <button
+            class="dropdown-toggle d-block py-0 px-1"
+            type="button"
+            id="settings-ddown"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
             <img src="./assets/images/icons/settings.svg" alt="" />
           </button>
-          <div>
+          <div class="dropdown-menu" aria-labelledby="settings-ddown">
             <div class="d-flex flex-row align-items-center">
               <img
                 class="mode-dark-asset"
@@ -1801,6 +1808,7 @@
               </label>
               <img src="./assets/images/icons/mode-light.svg" alt="" />
             </div>
+            <a class="text-13 text-orange mt-3 d-block" href="">FAQs</a>
           </div>
         </div>
 
