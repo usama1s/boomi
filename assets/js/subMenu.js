@@ -10,7 +10,8 @@ $("#prompts, #attributes, #closeAlll").change((event) => {
       .each(function () {
         totalHeight = totalHeight + $(this).outerHeight(true);
       });
-
     $(subMenu).css("height", totalHeight + 40);
   }
 });
+
+

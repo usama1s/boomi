@@ -540,6 +540,7 @@ input.custom-toggle:checked + label > div {
 .nav-btn-submenu .list .options-btn::before {
   width: 25px;
   height: 25px;
+  top: 56%;
 }
 
 /* .options-btn.hovered::before, */
@@ -641,24 +642,25 @@ nav {
 }
 
 .nav-btn-submenu .list {
-  max-height: calc(100% - 60px);
+  max-height: calc(100% - 85px);
   overflow-y: auto;
   position: relative;
   display: block;
   padding-bottom: 0;
   padding-top: 5px;
-  padding-right: 10px;
+  padding-right: 5px;
 }
 
 .nav-btn-submenu .list a {
-  padding: 10px 15px;
-  margin: 15px 0 !important;
-}
-#attributes + label + .nav-btn-submenu .list a {
-  margin: 0 !important;
+  padding: 10px 15px 10px 15px;
+  margin: 0 0 !important;
+  flex: 1;
 }
 
-.list a:hover {
+.nav-btn-submenu .list .options-item{
+  padding-right: 8px;
+}
+.nav-btn-submenu .list .options-item:hover {
   cursor: pointer;
   background-color: rgba(204, 204, 204, 0.25);
   border-radius: 6px;

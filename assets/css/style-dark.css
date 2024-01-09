@@ -107,7 +107,7 @@ body.mode-dark .modal .message-box > div {
   background: #3c4245;
 }
 
-body.mode-dark .nav-btn-submenu .list a:hover {
+body.mode-dark .nav-btn-submenu .list .options-item:hover {
   /* background-color: rgba(16, 13, 47, 0.25); */
   color: white !important;
 }
