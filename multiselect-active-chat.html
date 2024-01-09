@@ -614,25 +614,37 @@
         <nav
           class="d-flex flex-row align-items-center justify-content-end overflow-visible"
         >
-          <input type="radio" name="nav-btns-inp" id="closeAlll" hidden />
+          <input type="radio" name="nav-btns-inp" id="coseAllSubmenus" hidden />
+          <input
+            type="radio"
+            class="nav-btns-inp"
+            name="nav-btns-inp"
+            id="prompts-inp"
+            data-menu="prompts-submenu"
+            hidden
+          />
+          <input
+            type="radio"
+            class="nav-btns-inp"
+            name="nav-btns-inp"
+            id="data-inp"
+            data-menu="data-submenu"
+            hidden
+          />
           <div>
-            <input
-              type="radio"
-              class="nav-btns-inp"
-              name="nav-btns-inp"
-              id="prompts"
-              hidden
-            />
             <label
               class="d-flex align-items-center mx-2 nav-btn overflow-visible"
-              for="prompts"
+              for="prompts-inp"
             >
               <span class="text-13 text-blue mr-1">Prompts</span>
               <img src="./assets/images/icons/prompts.svg" alt="" />
             </label>
-            <div class="nav-btn-submenu pb-1">
+            <div class="nav-btn-submenu pb-1" id="prompts-submenu">
               <div class="">
-                <label class="d-flex align-items-center closee" for="closeAlll">
+                <label
+                  class="d-flex align-items-center closee"
+                  for="coseAllSubmenus"
+                >
                   <img
                     class="mr-1"
                     src="./assets/images/icons/multiply.svg"
@@ -1179,23 +1191,19 @@
             </div>
           </div>
           <div>
-            <input
-              type="radio"
-              class="nav-btns-inp"
-              name="nav-btns-inp"
-              id="attributes"
-              hidden
-            />
             <label
               class="d-flex align-items-center mr-4 ml-2 nav-btn overflow-visible"
-              for="attributes"
+              for="data-inp"
             >
               <span class="text-13 text-blue mr-1">Data</span>
               <img src="./assets/images/icons/data.svg" alt="" />
             </label>
-            <div class="nav-btn-submenu">
+            <div class="nav-btn-submenu" id="data-submenu">
               <div>
-                <label class="d-flex align-items-center closee" for="closeAlll">
+                <label
+                  class="d-flex align-items-center closee"
+                  for="coseAllSubmenus"
+                >
                   <img
                     class="mr-1"
                     src="./assets/images/icons/multiply.svg"

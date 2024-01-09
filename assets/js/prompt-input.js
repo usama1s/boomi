@@ -20,7 +20,7 @@ $("#prompt-input").bind("input propertychange", function (event) {
 
 $(".nav-btn-submenu .list#data-menu a").click((event) => {
   $("#prompt-input").val($(event.target).text()).trigger("input");
-  $("#closeAlll").prop("checked", true);
+  $("#coseAllSubmenus").prop("checked", true);
 });
 
 $(".clear-prompt-btn").click((event) => {
